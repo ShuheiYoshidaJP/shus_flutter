@@ -1,6 +1,6 @@
-.PHONY: all run_dev_web run_dev_mobile run_unit clean upgrade lint format build_dev_mobile help watch gen run_stg_mobile run_prd_mobile build_apk_dev build_apk_stg build_apk_prd purge 
+.PHONY: all run_unit clean upgrade lint format help watch gen purge 
 
-all: lint format run_dev_mobile
+all: lint format run
 
 # Adding a help file: https://gist.github.com/prwhite/8168133#gistcomment-1313022
 help: ## This help dialog.
@@ -16,48 +16,43 @@ help: ## This help dialog.
 
 run_unit: ## Runs unit tests
 	@echo "╠ Running the tests"
-	@flutter test || (echo "Error while running tests"; exit 1)
+	@fvm flutter test || (echo "Error while running tests"; exit 1)
 
 clean: ## Cleans the environment
 	@echo "╠ Cleaning the project..."
 	@rm -rf pubspec.lock
-	@flutter clean
-	@flutter pub get
+	@fvm flutter clean
+	@fvm flutter pub get
 
-watch: ## Watches the files for changes
-	@echo "╠ Watching the project..."
-	@flutter pub run build_runner watch --delete-conflicting-outputs
+df: ## Run build runner and delete conflict
+	@echo "╠ Run build runner and delete conflict..."
+	@fvm flutter pub run build_runner build --delete-conflicting-outputs
 
 gen: ## Generates the assets
 	@echo "╠ Generating the assets..."
-	@flutter pub get
-	@flutter packages pub run build_runner build
+	@fvm flutter pub get
+	@fvm flutter packages pub run build_runner build
 
 format: ## Formats the code
 	@echo "╠ Formatting the code"
 	@dart format lib .
-	@flutter pub run import_sorter:main
-	@flutter format lib
+	@fvm flutter pub run import_sorter:main
+	@fvm flutter format lib
 
 lint: ## Lints the code
 	@echo "╠ Verifying code..."
-	@dart analyze . || (echo "Error in project"; exit 1)
+	@fvm dart analyze . || (echo "Error in project"; exit 1)
 
 upgrade: clean ## Upgrades dependencies
 	@echo "╠ Upgrading dependencies..."
-	@flutter pub upgrade
+	@fvm flutter pub upgrade
 
-run_dev_web: ## Runs the web application in dev
-	@echo "╠ Running the app"
-	@flutter run -d chrome --dart-define=ENVIRONMENT=dev
+run: ## Run main.dart
+	@fvm flutter run -t lib/main.dart
 
-run_dev_mobile: ## Runs the mobile application in dev
-	@echo "╠ Running the app"
-	@flutter run --flavor development -t lib/main_development.dart
-
-purge: ## Purges the Flutter 
+purge: ## Purges the fvm Flutter 
 	@pod deintegrate
-	@flutter clean
-	@flutter pub get
+	@fvm flutter clean
+	@fvm flutter pub get
 
 	
