@@ -9,11 +9,13 @@
             "request": "launch",
             "type": "dart",
             "preLaunchTask": "gen",
+            "console": "debugConsole",
         },
         {
             "name": "Run",
             "request": "launch",
             "type": "dart",
+            "console": "debugConsole",
         },
     ]
 }
