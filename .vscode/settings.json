@@ -1,3 +1,13 @@
 {
-    "dart.flutterSdkPath": "/Users/yoshidashuuhei/Documents/shu-file/dev-mob/nemuriya/nemuriya-prj/nemuriya_app_review/.fvm/flutter_sdk"
-}
+    "dart.flutterSdkPath": ".fvm/flutter_sdk",
+    "dart.flutterSdkPaths": ["/Users/usr/fvm/versions"],
+    // Remove .fvm files from search
+    "search.exclude": {
+      "**/.fvm": true
+    },
+    // Remove from file watching
+    "files.watcherExclude": {
+      "**/.fvm": true
+    }
+    // ... other settings
+  }
