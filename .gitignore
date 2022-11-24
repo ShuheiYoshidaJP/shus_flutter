@@ -48,3 +48,6 @@ app.*.map.json
 
 # use freezed
 *.freezed.dart
+
+# fvm
+.fvm/flutter_sdk
