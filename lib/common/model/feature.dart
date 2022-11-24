@@ -9,8 +9,8 @@ part 'feature.freezed.dart';
 @freezed
 class Feature with _$Feature {
   factory Feature({
-    @Default('') String title,
-    @Default('') String desctiption,
+    required String title,
+    String? desctiption,
     required PageRouteInfo route,
     DateTime? uploadAt,
     @Default([]) List<PlatformType> platformTypes,
