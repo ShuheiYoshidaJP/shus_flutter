@@ -6,6 +6,7 @@ import 'package:shus_flutter/common/router/app_router.dart';
 final allFeature = [
   Feature(
     title: 'MLKit Pose Detection',
+    imagePath: 'pose.jpeg',
     desctiption: 'ネイティブのコードを呼び出すMethodChannelを使って、体の骨格検知を行う。',
     route: const PoseRoute(),
     platformTypes: [

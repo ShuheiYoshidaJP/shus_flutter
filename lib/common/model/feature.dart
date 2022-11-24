@@ -10,6 +10,7 @@ part 'feature.freezed.dart';
 class Feature with _$Feature {
   factory Feature({
     required String title,
+    required String imagePath,
     String? desctiption,
     required PageRouteInfo route,
     DateTime? uploadAt,
