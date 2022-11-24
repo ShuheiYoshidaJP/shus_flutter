@@ -1,7 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:shus_flutter/common/model/feature.dart';
-import 'package:shus_flutter/common/router/route_path.dart';
+import 'package:shus_flutter/common/router/app_router.dart';
 
 class FeatureListPage extends StatefulWidget {
   const FeatureListPage({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _FeatureListPageState extends State<FeatureListPage> {
 
   @override
   void initState() {
-    featureList = [Feature(path: RoutePath.pose)];
+    featureList = [Feature(route: const PoseRoute())];
     super.initState();
   }
 
@@ -27,14 +27,18 @@ class _FeatureListPageState extends State<FeatureListPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('feature list'),
-            const SizedBox(height: 16,),
-            Text('current route path: ${ModalRoute.of(context)?.settings.name}'),
-            const SizedBox(height: 16,),
+            const SizedBox(
+              height: 16,
+            ),
+            Text(
+              'current route path: ${ModalRoute.of(context)?.settings.name}',
+            ),
+            const SizedBox(
+              height: 16,
+            ),
             TextButton(
               child: const Text('next'),
-              onPressed: () {
-                context.go(featureList[0].path.location);
-              },
+              onPressed: () => context.pushRoute(featureList[0].route),
             ),
           ],
         ),

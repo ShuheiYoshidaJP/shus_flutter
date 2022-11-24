@@ -1,5 +1,5 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class PosePage extends StatefulWidget {
   const PosePage({Key? key}) : super(key: key);
@@ -24,9 +24,7 @@ class _PosePageState extends State<PosePage> {
             const SizedBox(height: 16),
             TextButton(
               child: const Text('pop'),
-              onPressed: () {
-                context.pop();
-              },
+              onPressed: () => context.popRoute(),
             ),
           ],
         ),
