@@ -46,8 +46,9 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# use freezed
+# Generated file via build runner
 *.freezed.dart
+*.gr.dart
 
 # fvm
 .fvm/flutter_sdk
