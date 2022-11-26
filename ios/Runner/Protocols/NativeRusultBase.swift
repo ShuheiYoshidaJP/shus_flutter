@@ -6,7 +6,6 @@
 //
 
 import Foundation
-protocol NativeRusultBase {
+protocol NativeRusultBase: InterfaceBase {
     var isSuccess: Bool { get }
-    func toDict() -> [String: Any]
 }
