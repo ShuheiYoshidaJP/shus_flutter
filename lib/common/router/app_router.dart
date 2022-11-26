@@ -11,11 +11,9 @@ part 'app_router.gr.dart';
     AutoRoute(
       page: FeatureListPage,
       initial: true,
-      path: '/',
     ),
     AutoRoute(
       page: PosePage,
-      path: '/',
     ),
   ],
 )
