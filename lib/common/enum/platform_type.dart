@@ -31,4 +31,8 @@ enum PlatformType {
         return [Icons.apple, Icons.computer_sharp];
     }
   }
+
+  bool get hasSingleIcon {
+    return icon.length == 1;
+  }
 }
