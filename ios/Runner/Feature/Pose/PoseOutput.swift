@@ -6,18 +6,37 @@
 //
 
 import Foundation
+import MLKit
 
 struct PoseOutput: NativeOutput {
     var type: FeatureType = .pose
     
     var isSuccess: Bool { return true }
     
-    func toDict() -> [String : Any] {
+    var poseData: PoseData
+    
+    init(poseData: PoseData) {
+        self.poseData = poseData
+    }
+    
+    func toDict() -> [String : Any?] {
         return [
             "type": type.value,
             "result": isSuccess,
+            "value": poseData.toDict(),
         ]
     }
+}
+
+struct PoseData: InterfaceBase {
     
+    var image: FlutterImage
+    var pose: PoseInterface
     
+    func toDict() -> [String : Any?] {
+        return [
+            "image": image.toDict(),
+            "pose": pose.toDict(),
+        ]
+    }
 }

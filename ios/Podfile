@@ -10,7 +10,7 @@ project 'Runner', {
   'Release' => :release,
 }
 
-pod 'GoogleMLKit/PoseDetection', '3.2.0'
+pod 'GoogleMLKit/PoseDetectionAccurate', '3.2.0'
 
 def flutter_root
   generated_xcode_build_settings_path = File.expand_path(File.join('..', 'Flutter', 'Generated.xcconfig'), __FILE__)

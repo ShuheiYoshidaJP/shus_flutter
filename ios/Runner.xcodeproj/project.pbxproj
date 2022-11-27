@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		027419D82932488B00F2F266 /* InterfaceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419D72932488B00F2F266 /* InterfaceBase.swift */; };
+		027419DC29324D5700F2F266 /* PoseMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419DB29324D5700F2F266 /* PoseMain.swift */; };
+		027419DF2932500200F2F266 /* FlutterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419DE2932500200F2F266 /* FlutterImage.swift */; };
+		027419E12932544800F2F266 /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419E02932544800F2F266 /* ImageRotation.swift */; };
+		027419FF2932616C00F2F266 /* PoseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419FE2932616C00F2F266 /* PoseBase.swift */; };
+		028A1D28293344F4009F2592 /* DrawRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D26293344F4009F2592 /* DrawRenderer.swift */; };
+		028A1D29293344F4009F2592 /* Segments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D27293344F4009F2592 /* Segments.swift */; };
+		028A1D2D29334CD6009F2592 /* PoseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D2C29334CD6009F2592 /* PoseInterface.swift */; };
+		028A1D2F2933734D009F2592 /* PoseInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D2E2933734D009F2592 /* PoseInput.swift */; };
 		02C4886E29321EF100BFC7CC /* NativeChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4886D29321EF100BFC7CC /* NativeChannel.swift */; };
 		02C488702932310B00BFC7CC /* NativePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4886F2932310B00BFC7CC /* NativePlugin.swift */; };
 		02C488722932324300BFC7CC /* NativeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488712932324300BFC7CC /* NativeOutput.swift */; };
@@ -40,6 +48,14 @@
 
 /* Begin PBXFileReference section */
 		027419D72932488B00F2F266 /* InterfaceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBase.swift; sourceTree = "<group>"; };
+		027419DB29324D5700F2F266 /* PoseMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseMain.swift; sourceTree = "<group>"; };
+		027419DE2932500200F2F266 /* FlutterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterImage.swift; sourceTree = "<group>"; };
+		027419E02932544800F2F266 /* ImageRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRotation.swift; sourceTree = "<group>"; };
+		027419FE2932616C00F2F266 /* PoseBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBase.swift; sourceTree = "<group>"; };
+		028A1D26293344F4009F2592 /* DrawRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawRenderer.swift; sourceTree = "<group>"; };
+		028A1D27293344F4009F2592 /* Segments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segments.swift; sourceTree = "<group>"; };
+		028A1D2C29334CD6009F2592 /* PoseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseInterface.swift; sourceTree = "<group>"; };
+		028A1D2E2933734D009F2592 /* PoseInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseInput.swift; sourceTree = "<group>"; };
 		02C4886D29321EF100BFC7CC /* NativeChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeChannel.swift; sourceTree = "<group>"; };
 		02C4886F2932310B00BFC7CC /* NativePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativePlugin.swift; sourceTree = "<group>"; };
 		02C488712932324300BFC7CC /* NativeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeOutput.swift; sourceTree = "<group>"; };
@@ -79,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		027419DD29324FD000F2F266 /* TypeInterface */ = {
+			isa = PBXGroup;
+			children = (
+				027419DE2932500200F2F266 /* FlutterImage.swift */,
+				027419E02932544800F2F266 /* ImageRotation.swift */,
+			);
+			path = TypeInterface;
+			sourceTree = "<group>";
+		};
 		02C4886C29321DDB00BFC7CC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +127,14 @@
 		02C4887A29323B8500BFC7CC /* Pose */ = {
 			isa = PBXGroup;
 			children = (
+				028A1D26293344F4009F2592 /* DrawRenderer.swift */,
+				028A1D27293344F4009F2592 /* Segments.swift */,
 				02C4887C29323BA200BFC7CC /* PoseError.swift */,
 				02C4887E29323EAA00BFC7CC /* PoseOutput.swift */,
+				027419DB29324D5700F2F266 /* PoseMain.swift */,
+				027419FE2932616C00F2F266 /* PoseBase.swift */,
+				028A1D2C29334CD6009F2592 /* PoseInterface.swift */,
+				028A1D2E2933734D009F2592 /* PoseInput.swift */,
 			);
 			path = Pose;
 			sourceTree = "<group>";
@@ -153,6 +184,7 @@
 				02C48873293232BA00BFC7CC /* Interface */,
 				02C4886C29321DDB00BFC7CC /* Protocols */,
 				02C488822932466D00BFC7CC /* Feature */,
+				027419DD29324FD000F2F266 /* TypeInterface */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -198,6 +230,7 @@
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				E27414FD33A03FDE93D7086B /* [CP] Embed Pods Frameworks */,
+				F9B753A5B51609666A62E966 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +356,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F9B753A5B51609666A62E966 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -332,9 +382,17 @@
 			files = (
 				02C488772932334200BFC7CC /* NativeError.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				028A1D28293344F4009F2592 /* DrawRenderer.swift in Sources */,
+				027419DF2932500200F2F266 /* FlutterImage.swift in Sources */,
 				027419D82932488B00F2F266 /* InterfaceBase.swift in Sources */,
+				027419FF2932616C00F2F266 /* PoseBase.swift in Sources */,
+				028A1D2D29334CD6009F2592 /* PoseInterface.swift in Sources */,
 				02C488792932348F00BFC7CC /* NativeRusultBase.swift in Sources */,
 				02C4887D29323BA200BFC7CC /* PoseError.swift in Sources */,
+				028A1D2F2933734D009F2592 /* PoseInput.swift in Sources */,
+				027419DC29324D5700F2F266 /* PoseMain.swift in Sources */,
+				027419E12932544800F2F266 /* ImageRotation.swift in Sources */,
+				028A1D29293344F4009F2592 /* Segments.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				02C4886E29321EF100BFC7CC /* NativeChannel.swift in Sources */,
 				02C488722932324300BFC7CC /* NativeOutput.swift in Sources */,

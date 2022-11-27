@@ -23,21 +23,14 @@ class NativeChannel {
             (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
             switch call.method {
             case "pose-fn":
-                guard let args = call.arguments as? [String: Any] else {
-                    return
-                }
-                self.plugin.poseDetect(args: args)
+                guard let args = call.arguments as? [String: Any] else { return }
+                let input = PoseInput(args: call.arguments)
+                let data = self.plugin.poseDetect(args: args)
+                result(data)
             default:
                 result(FlutterMethodNotImplemented)
                 return
             }
         })
-    }
-    
-    func setCompletionHandler() {
-        plugin.completePose = { poseResult in
-            let args = poseResult.toDict()
-            self.channel.invokeMethod("pose-nf", arguments: args)
-        }
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol InterfaceBase {
-    func toDict() -> [String: Any]
+    func toDict() -> [String: Any?]
 }
