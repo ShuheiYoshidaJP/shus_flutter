@@ -2,9 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:shus_flutter/common/interface/flutter_image.dart';
 import 'package:shus_flutter/common/styles.dart';
 import 'package:shus_flutter/common/ui_components/length_text_field.dart';
 import 'package:shus_flutter/common/ui_components/space.dart';
+import 'package:shus_flutter/feature/pose/pose_channel.dart';
+import 'package:shus_flutter/feature/pose/pose_input.dart';
 
 class PoseInitialPage extends StatefulWidget {
   const PoseInitialPage({super.key});
@@ -15,6 +18,7 @@ class PoseInitialPage extends StatefulWidget {
 
 class _PoseInitialPageState extends State<PoseInitialPage> {
   final picker = ImagePicker();
+  final PoseChannel channel = PoseChannel();
   String label = '';
   double height = 100.0;
   PickedFile? file;
@@ -96,7 +100,7 @@ class _PoseInitialPageState extends State<PoseInitialPage> {
           if (file != null && height > 0) ...{
             Space.h8,
             TextButton(
-              onPressed: () {},
+              onPressed: _sendData,
               child: const Text('決定', style: Styles.body),
             ),
           },
@@ -110,5 +114,13 @@ class _PoseInitialPageState extends State<PoseInitialPage> {
     setState(() {
       file = pickedFile;
     });
+  }
+
+  void _sendData() {
+    if (file != null) {
+      final image = FlutterFileImage(file!.path);
+      final input = PoseInput(height: height, image: image);
+      channel.poseDetect(input);
+    }
   }
 }
