@@ -22,7 +22,7 @@ enum PoseError: Int, NativeError {
         case .imageNotFound:
             return "UIImage not found"
         case .unexpected:
-            return localizedDescription.description
+            return "Unexpected Error"
         }
     }
     
@@ -33,6 +33,7 @@ enum PoseError: Int, NativeError {
             "type": type.value,
             "result": isSuccess,
             "code": self.rawValue,
+            "message": message,
         ]
     }
     
