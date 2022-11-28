@@ -24,7 +24,7 @@ class PoseMain {
         switch poseResult {
         case .success(let poseList):
             let renderedImage: UIImage = renderer.draw(uiImage: uiImage, poseList: poseList)
-            let flutterImage = FlutterImage(from: renderedImage)
+            let flutterImage = FlutterImage(uIImage: renderedImage)
             let poseInterface = PoseInterface(poseList: poseList)
             let poseData = PoseData(image: flutterImage, pose: poseInterface)
             let poseOutput = PoseOutput(poseData: poseData)
