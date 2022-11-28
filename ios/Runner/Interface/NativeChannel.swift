@@ -23,10 +23,11 @@ class NativeChannel {
             (call: FlutterMethodCall, result: @escaping FlutterResult) -> Void in
             switch call.method {
             case "pose-fn":
-                guard let args = call.arguments as? [String: Any] else { return }
                 let input = PoseInput(args: call.arguments)
-                let data = self.plugin.poseDetect(args: args)
-                result(data)
+                self.plugin.poseDetect(poseInput: input,
+                                       detectComleted: { resultData in
+                    result(resultData)
+                })
             default:
                 result(FlutterMethodNotImplemented)
                 return
