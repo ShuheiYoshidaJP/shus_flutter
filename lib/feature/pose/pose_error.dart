@@ -1,14 +1,11 @@
-import 'package:shus_flutter/feature/pose/pose_result.dart';
 
-class PoseError implements PoseResult {
+class PoseError {
   int code;
   String message;
 
-  PoseError(this.code, this.message);
+  PoseError({required this.code, required this.message});
 
   factory PoseError.fromData(Map<String, dynamic> args) {
-    int code = args["code"];
-    String message = args["message"];
-    return PoseError(code, message);
+    return PoseError(code: args["code"], message: args["message"]);
   }
 }
