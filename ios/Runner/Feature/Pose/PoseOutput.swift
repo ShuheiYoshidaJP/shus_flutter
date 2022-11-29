@@ -9,10 +9,7 @@ import Foundation
 import MLKit
 
 struct PoseOutput: NativeOutput {
-    var type: FeatureType = .pose
-    
     var isSuccess: Bool { return true }
-    
     var image: FlutterImage
     var pose: PoseInterface
     
@@ -23,7 +20,6 @@ struct PoseOutput: NativeOutput {
     
     func toDict() -> [String : Any?] {
         return [
-            "type": type.value,
             "result": isSuccess,
             "value": [
                 "image": image.toDict(),

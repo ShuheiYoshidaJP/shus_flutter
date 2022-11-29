@@ -7,6 +7,4 @@
 
 import Foundation
 
-protocol NativeOutput: NativeRusultBase {
-    var type: FeatureType { get set }
-}
+protocol NativeOutput: NativeRusultBase {}

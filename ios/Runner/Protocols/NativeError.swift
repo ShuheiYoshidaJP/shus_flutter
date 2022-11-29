@@ -8,6 +8,5 @@
 import Foundation
 
 protocol NativeError: NativeRusultBase, Error {
-    var type: FeatureType { get }
     var message: String { get }
 }

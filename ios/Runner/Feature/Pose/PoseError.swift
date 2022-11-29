@@ -13,8 +13,6 @@ enum PoseError: Int, NativeError {
     case imageNotFound
     case unexpected
     
-    var type: FeatureType { return .pose }
-    
     var message: String {
         switch self {
         case .detect:
@@ -30,7 +28,6 @@ enum PoseError: Int, NativeError {
     
     func toDict() -> [String : Any?] {
         return [
-            "type": type.value,
             "result": isSuccess,
             "code": self.rawValue,
             "message": message,

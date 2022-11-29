@@ -12,7 +12,6 @@ import MLKit
 class DrawRenderer {
     func draw(uiImage: UIImage, poseList: [Pose]) -> UIImage {
         
-        
         let currentImageSize = uiImage.size
         let originalImageSize: CGSize = {
             switch uiImage.imageOrientation {

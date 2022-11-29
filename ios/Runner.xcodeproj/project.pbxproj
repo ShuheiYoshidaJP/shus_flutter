@@ -19,7 +19,6 @@
 		02C4886E29321EF100BFC7CC /* NativeChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4886D29321EF100BFC7CC /* NativeChannel.swift */; };
 		02C488702932310B00BFC7CC /* NativePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4886F2932310B00BFC7CC /* NativePlugin.swift */; };
 		02C488722932324300BFC7CC /* NativeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488712932324300BFC7CC /* NativeOutput.swift */; };
-		02C48875293232E100BFC7CC /* FeatureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C48874293232E100BFC7CC /* FeatureType.swift */; };
 		02C488772932334200BFC7CC /* NativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488762932334200BFC7CC /* NativeError.swift */; };
 		02C488792932348F00BFC7CC /* NativeRusultBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488782932348F00BFC7CC /* NativeRusultBase.swift */; };
 		02C4887D29323BA200BFC7CC /* PoseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4887C29323BA200BFC7CC /* PoseError.swift */; };
@@ -61,7 +60,6 @@
 		02C4886D29321EF100BFC7CC /* NativeChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeChannel.swift; sourceTree = "<group>"; };
 		02C4886F2932310B00BFC7CC /* NativePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativePlugin.swift; sourceTree = "<group>"; };
 		02C488712932324300BFC7CC /* NativeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeOutput.swift; sourceTree = "<group>"; };
-		02C48874293232E100BFC7CC /* FeatureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureType.swift; sourceTree = "<group>"; };
 		02C488762932334200BFC7CC /* NativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeError.swift; sourceTree = "<group>"; };
 		02C488782932348F00BFC7CC /* NativeRusultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRusultBase.swift; sourceTree = "<group>"; };
 		02C4887C29323BA200BFC7CC /* PoseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseError.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 		02C488822932466D00BFC7CC /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				02C48874293232E100BFC7CC /* FeatureType.swift */,
 				02C4887A29323B8500BFC7CC /* Pose */,
 			);
 			path = Feature;
@@ -414,7 +411,6 @@
 				02C488722932324300BFC7CC /* NativeOutput.swift in Sources */,
 				02C4887F29323EAA00BFC7CC /* PoseOutput.swift in Sources */,
 				02C488702932310B00BFC7CC /* NativePlugin.swift in Sources */,
-				02C48875293232E100BFC7CC /* FeatureType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
