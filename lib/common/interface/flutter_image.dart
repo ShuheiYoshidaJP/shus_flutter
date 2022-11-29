@@ -15,8 +15,9 @@ enum ImageFileType {
   }
 }
 
-abstract class FlutterImageBase implements NativeSendBase {
+abstract class FlutterImageBase<T> implements NativeSendBase {
   ImageFileType get imageFileType;
+  T get value;
 }
 
 class FlutterFileImage implements FlutterImageBase {
@@ -26,6 +27,9 @@ class FlutterFileImage implements FlutterImageBase {
 
   @override
   ImageFileType get imageFileType => ImageFileType.file;
+
+  @override
+  String get value => path;
 
   @override
   Map<String, dynamic> toData() {
@@ -48,6 +52,9 @@ class FlutterByteImage implements FlutterImageBase {
 
   @override
   ImageFileType get imageFileType => ImageFileType.bytes;
+
+  @override
+  Uint8List get value => bytes;
 
   @override
   Map<String, dynamic> toData() {
