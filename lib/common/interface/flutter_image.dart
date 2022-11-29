@@ -37,9 +37,14 @@ class FlutterFileImage implements FlutterImageBase {
 }
 
 class FlutterByteImage implements FlutterImageBase {
-  final Uint8List bytes;
+  Uint8List bytes;
 
   FlutterByteImage(this.bytes);
+
+  factory FlutterByteImage.fromData(Map<String, dynamic> args) {
+    Uint8List bytesData = args["data"];
+    return FlutterByteImage(bytesData);
+  }
 
   @override
   ImageFileType get imageFileType => ImageFileType.bytes;
