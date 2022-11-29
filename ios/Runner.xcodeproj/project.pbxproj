@@ -25,6 +25,7 @@
 		02C4887F29323EAA00BFC7CC /* PoseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4887E29323EAA00BFC7CC /* PoseOutput.swift */; };
 		02F1CF682935070C002EC56E /* DispatchQueue+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1CF672935070C002EC56E /* DispatchQueue+Background.swift */; };
 		02F1CF6A2935B53B002EC56E /* CGPoint+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1CF692935B53B002EC56E /* CGPoint+Rotate.swift */; };
+		02F1CF6C29365D95002EC56E /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1CF6B29365D95002EC56E /* Matrix.swift */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		02C4887E29323EAA00BFC7CC /* PoseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseOutput.swift; sourceTree = "<group>"; };
 		02F1CF672935070C002EC56E /* DispatchQueue+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Background.swift"; sourceTree = "<group>"; };
 		02F1CF692935B53B002EC56E /* CGPoint+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Rotate.swift"; sourceTree = "<group>"; };
+		02F1CF6B29365D95002EC56E /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		0A4EC626E9AE73B171AB3A7D /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				02F1CF672935070C002EC56E /* DispatchQueue+Background.swift */,
 				02F1CF692935B53B002EC56E /* CGPoint+Rotate.swift */,
+				02F1CF6B29365D95002EC56E /* Matrix.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				028A1D2F2933734D009F2592 /* PoseInput.swift in Sources */,
 				027419DC29324D5700F2F266 /* PoseMain.swift in Sources */,
 				027419E12932544800F2F266 /* ImageRotation.swift in Sources */,
+				02F1CF6C29365D95002EC56E /* Matrix.swift in Sources */,
 				028A1D29293344F4009F2592 /* Segments.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				02C4886E29321EF100BFC7CC /* NativeChannel.swift in Sources */,
