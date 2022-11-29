@@ -116,11 +116,12 @@ class _PoseInitialPageState extends State<PoseInitialPage> {
     });
   }
 
-  void _sendData() {
+  Future<void> _sendData() async {
     if (file != null) {
       final image = FlutterFileImage(file!.path);
       final input = PoseInput(height: height, image: image);
-      channel.poseDetect(input);
+      final result = await channel.poseDetect(input);
+      print(result);
     }
   }
 }
