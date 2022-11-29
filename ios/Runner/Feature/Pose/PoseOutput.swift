@@ -21,10 +21,8 @@ struct PoseOutput: NativeOutput {
     func toDict() -> [String : Any?] {
         return [
             "result": isSuccess,
-            "value": [
-                "image": image.toDict(),
-                "pose": pose.toDict(),
-            ],
+            "image": image.toDict(),
+            "pose": pose.toDict(),
         ]
     }
 }
