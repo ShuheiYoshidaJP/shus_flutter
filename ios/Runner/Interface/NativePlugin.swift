@@ -8,15 +8,12 @@
 import Foundation
 
 class NativePlugin {
-    let poseMain = PoseMain()    
+    let poseMain = PoseMain()
     
     func poseDetect(poseInput: PoseInput,
                     detectComleted: @escaping ([String: Any?]) -> () ) {
         let uIImage = poseInput.image?.uIImage
-        DispatchQueue.background(input: uIImage) { uIImage -> Result<PoseOutput, PoseError> in
-            let result = self.poseMain.detect(uiImage: uIImage)
-            return result
-        } completion: { result in
+        poseMain.detect(uiImage: uIImage) { result in
             switch result {
             case .success(let output):
                 detectComleted(output.toDict())
