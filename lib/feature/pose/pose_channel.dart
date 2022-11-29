@@ -1,9 +1,11 @@
 import 'package:shus_flutter/common/interface/native_channel.dart';
 import 'package:shus_flutter/feature/pose/pose_input.dart';
+import 'package:shus_flutter/feature/pose/pose_result.dart';
 
 class PoseChannel extends NativeChannel {
-  Future<void> poseDetect(PoseInput input) async {
+  Future<PoseResult> poseDetect(PoseInput input) async {
     final result = await channel.invokeMethod("pose-fn", input.toData());
-    print(result);
+    final mapData = Map<String, dynamic>.from(result);
+    return PoseResult.fromData(mapData);
   }
 }
