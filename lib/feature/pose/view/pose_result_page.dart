@@ -4,7 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:shus_flutter/common/interface/flutter_image.dart';
 import 'package:shus_flutter/common/ui_components/space.dart';
-import 'package:shus_flutter/feature/pose/pose_output.dart';
+import 'package:shus_flutter/feature/pose/result/pose_output.dart';
 
 class PoseResultPage extends StatefulWidget {
   final PoseOutput output;
