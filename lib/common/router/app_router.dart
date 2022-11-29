@@ -3,6 +3,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:shus_flutter/feature/feature_list/feature_list_page.dart';
 import 'package:shus_flutter/feature/pose/pose_initial_page.dart';
+import 'package:shus_flutter/feature/pose/pose_output.dart';
+import 'package:shus_flutter/feature/pose/pose_page.dart';
 
 part 'app_router.gr.dart';
 
@@ -15,6 +17,9 @@ part 'app_router.gr.dart';
     ),
     AutoRoute(
       page: PoseInitialPage,
+    ),
+    AutoRoute(
+      page: PoseResultPage,
     ),
   ],
 )

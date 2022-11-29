@@ -1,8 +1,10 @@
 import 'dart:io';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shus_flutter/common/interface/flutter_image.dart';
+import 'package:shus_flutter/common/router/app_router.dart';
 import 'package:shus_flutter/common/styles.dart';
 import 'package:shus_flutter/common/ui_components/length_text_field.dart';
 import 'package:shus_flutter/common/ui_components/space.dart';
@@ -100,7 +102,7 @@ class _PoseInitialPageState extends State<PoseInitialPage> {
           if (file != null && height > 0) ...{
             Space.h8,
             TextButton(
-              onPressed: _sendData,
+              onPressed: () => _sendData(context),
               child: const Text('決定', style: Styles.body),
             ),
           },
@@ -116,12 +118,15 @@ class _PoseInitialPageState extends State<PoseInitialPage> {
     });
   }
 
-  Future<void> _sendData() async {
+  Future<void> _sendData(BuildContext context) async {
     if (file != null) {
       final image = FlutterFileImage(file!.path);
       final input = PoseInput(height: height, image: image);
       final result = await channel.poseDetect(input);
-      print(result);
+      if (!mounted) return;
+      if (result.isSuccess) {
+        context.pushRoute(PoseResultRoute(output: result.success));
+      }
     }
   }
 }
