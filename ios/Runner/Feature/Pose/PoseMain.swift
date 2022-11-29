@@ -26,8 +26,7 @@ class PoseMain {
             let renderedImage: UIImage = renderer.draw(uiImage: uiImage, poseList: poseList)
             let flutterImage = FlutterImage(uIImage: renderedImage)
             let poseInterface = PoseInterface(poseList: poseList)
-            let poseData = PoseData(image: flutterImage, pose: poseInterface)
-            let poseOutput = PoseOutput(poseData: poseData)
+            let poseOutput = PoseOutput(image: flutterImage, pose: poseInterface)
             return .success(poseOutput)
         case .failure(let error):
             return .failure(error)
