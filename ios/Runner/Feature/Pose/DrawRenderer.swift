@@ -12,31 +12,7 @@ import MLKit
 class DrawRenderer {
     func draw(uiImage: UIImage, poseList: [Pose]) -> UIImage {
         
-        let currentImageSize = uiImage.size
-        let originalImageSize: CGSize = {
-            switch uiImage.imageOrientation {
-            case .up:
-                return uiImage.size
-            case .down:
-                return uiImage.size
-            case .left:
-                return CGSize(width: uiImage.size.height, height: uiImage.size.width)
-            case .right:
-                return CGSize(width: uiImage.size.height, height: uiImage.size.width)
-            case .upMirrored:
-                return uiImage.size
-            case .downMirrored:
-                return uiImage.size
-            case .leftMirrored:
-                return CGSize(width: uiImage.size.height, height: uiImage.size.width)
-            case .rightMirrored:
-                return CGSize(width: uiImage.size.height, height: uiImage.size.width)
-            @unknown default:
-                return uiImage.size
-            }
-        }()
-        
-        UIGraphicsBeginImageContext(currentImageSize)
+        UIGraphicsBeginImageContext(uiImage.size)
         // ↓これいる？
         uiImage.draw(at: CGPoint.zero)
         // ↑これいる？
@@ -53,10 +29,10 @@ class DrawRenderer {
             for segment in Segment.allCases {
                 let start = pose.landmark(ofType: segment.points.from)
                 let startPoint = CGPoint(x: start.position.x, y: start.position.y)
-                let startAffine = startPoint.affine(inputSize: currentImageSize, ouputSize: originalImageSize, rad: .pi / 2.0)
+                let startAffine = startPoint.affine(uiImage: uiImage)
                 let end = pose.landmark(ofType: segment.points.to)
                 let endPoint = CGPoint(x: end.position.x, y: end.position.y)
-                let endAffine = endPoint.affine(inputSize: currentImageSize, ouputSize: originalImageSize, rad: .pi / 2.0)
+                let endAffine = endPoint.affine(uiImage: uiImage)
                 
                 drawLine(context: context,
                          lineWidth: lineWidth,
