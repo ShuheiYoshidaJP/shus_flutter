@@ -1,4 +1,4 @@
-package com.example.shus_flutter.`interface`
+package com.example.shus_flutter.channel
 
 class NativePlugin {
     fun poseDetect(){}
