@@ -1,4 +1,4 @@
-package com.example.shus_flutter.channel
+package com.example.shus_flutter.common.channel
 
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodChannel
