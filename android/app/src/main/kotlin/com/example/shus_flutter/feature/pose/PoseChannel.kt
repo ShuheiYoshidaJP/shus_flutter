@@ -16,7 +16,7 @@ class PoseChannel {
         poseDetector = PoseDetection.getClient(detectorOptions)
     }
 
-    fun poseDetect(args: HashMap<String, Any>?, callback: (PoseResult) -> Void) {
+    fun poseDetect(args: HashMap<String, Any>?, completion: (PoseResult) -> Unit) {
         // TODO: 12/3/22 Use kotlin-result
         val input = PoseInput(args)
         val flutterImage = input.image
@@ -25,19 +25,19 @@ class PoseChannel {
         if (flutterImage == null) {
             val error = PoseError.IMAGENOTFOUND
             result.failure = error
-            callback(result)
+            completion(result)
         } else {
             val inputImage = flutterImage.toInputImage()
             poseDetector.process(inputImage)
                     .addOnSuccessListener { pose ->
                         val success = PoseSuccess(pose, flutterImage.bitmap)
                         result.success = success
-                        callback(result)
+                        completion(result)
                     }
                     .addOnFailureListener {
                         val error = PoseError.DETECT
                         result.failure = error
-                        callback(result)
+                        completion(result)
                     }
         }
     }
