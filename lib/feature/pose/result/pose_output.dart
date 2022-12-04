@@ -11,12 +11,19 @@ class PoseOutput {
 
   factory PoseOutput.fromData(Map<String, dynamic> args) {
     final imageArgs = Map<String, dynamic>.from(args["image"]);
-    final poseData = Map<String, dynamic>.from(args["pose"]);
-    final poseArray = PoseBodyPartType.values.map((type) {
-      var mapData = Map<String, dynamic>.from(poseData[type.responseKey]);
-      var point = Pose3d.fromData(mapData);
-      return Pose(type: type, point: point);
-    }).toList();
+    final poseArgs = args["pose"];
+    List<Pose> poseArray;
+    if (poseArgs == null) {
+      poseArray = [];
+    } else {
+      final poseData = Map<String, dynamic>.from(poseArgs);
+      poseArray = PoseBodyPartType.values.map((type) {
+        var mapData = Map<String, dynamic>.from(poseData[type.responseKey]);
+        var point = Pose3d.fromData(mapData);
+        return Pose(type: type, point: point);
+      }).toList();
+    }
+
     return PoseOutput(
       image: FlutterByteImage.fromData(imageArgs),
       poseList: poseArray,
