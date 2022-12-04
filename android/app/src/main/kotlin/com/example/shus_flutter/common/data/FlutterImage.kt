@@ -2,17 +2,18 @@ package com.example.shus_flutter.common.data
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import com.example.shus_flutter.common.`interface`.NativeInterface
 import com.google.mlkit.vision.common.InputImage
 import java.util.*
 
-enum class FileType {
-    File, Bytes,
-}
-
-class FlutterImage() {
+class FlutterImage(): NativeInterface {
 
     lateinit var type: FileType
     lateinit var bitmap: Bitmap
+
+    enum class FileType {
+        File, Bytes,
+    }
 
     constructor(data: HashMap<String, Any>) : this() {
         val typeStr = data["fileType"] as String
@@ -34,8 +35,18 @@ class FlutterImage() {
         }
     }
 
+    constructor(bitmap: Bitmap) : this() {
+        type = FileType.Bytes
+        this.bitmap = bitmap
+    }
+
     fun toInputImage(): InputImage {
         return InputImage.fromBitmap(bitmap, 0)
+    }
+
+    override fun toData(): HashMap<String, Any> {
+        var result = HashMap<String, Any>()
+        return result
     }
 }
 
