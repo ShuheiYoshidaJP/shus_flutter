@@ -1,6 +1,5 @@
 package com.example.shus_flutter.feature.pose
 
-import com.google.mlkit.vision.common.internal.MultiFlavorDetectorCreator
 import com.google.mlkit.vision.pose.PoseDetection
 import com.google.mlkit.vision.pose.PoseDetector
 import com.google.mlkit.vision.pose.accurate.AccuratePoseDetectorOptions
@@ -17,8 +16,29 @@ class PoseChannel {
         poseDetector = PoseDetection.getClient(detectorOptions)
     }
 
-    fun poseDetect(args: HashMap<String, Any>?) {
+    fun poseDetect(args: HashMap<String, Any>?, callback: (PoseResult) -> Void) {
+        // TODO: 12/3/22 Use kotlin-result
         val input = PoseInput(args)
-        val inputImage = input.image?.toInputImage()
+        val flutterImage = input.image
+        val result = PoseResult()
+
+        if (flutterImage == null) {
+            val error = PoseError.IMAGENOTFOUND
+            result.failure = error
+            callback(result)
+        } else {
+            val inputImage = flutterImage.toInputImage()
+            poseDetector.process(inputImage)
+                    .addOnSuccessListener { pose ->
+                        val success = PoseSuccess(pose, flutterImage.bitmap)
+                        result.success = success
+                        callback(result)
+                    }
+                    .addOnFailureListener {
+                        val error = PoseError.DETECT
+                        result.failure = error
+                        callback(result)
+                    }
+        }
     }
 }
