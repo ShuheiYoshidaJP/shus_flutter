@@ -14,7 +14,7 @@ graph LR
 
 ## Rendering
 
-<img src="https://github.com/ShuheiYoshidaJP/shus_flutter/tree/develop/README_ASSETS/rendering.png" width="300">
+<img src="https://github.com/ShuheiYoshidaJP/shus_flutter/blob/develop/README_ASSETS/rendering.png" width="300">
 
 iOS [DrawRenderer.swift](https://github.com/ShuheiYoshidaJP/shus_flutter/blob/develop/ios/Runner/Feature/Pose/DrawRenderer.swift)
 

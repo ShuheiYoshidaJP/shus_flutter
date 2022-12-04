@@ -29,6 +29,6 @@ make gen
 
 [Pose Detection](https://developers.google.com/ml-kit/vision/pose-detection) を使用して人の画像にレンダリングを行います。
 
-[Watch me](https://github.com/ShuheiYoshidaJP/shus_flutter/tree/develop/lib/feature/pose/README.md)
+[Watch me](https://github.com/ShuheiYoshidaJP/shus_flutter/blob/develop/lib/feature/pose/README.md)
 
-<img src="https://github.com/ShuheiYoshidaJP/shus_flutter/tree/develop/README_ASSETS/pose_detection.gif" width="300">
+<img src="https://github.com/ShuheiYoshidaJP/shus_flutter/blob/develop/README_ASSETS/pose_detection.gif" width="300">
