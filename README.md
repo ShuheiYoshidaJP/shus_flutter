@@ -1,16 +1,32 @@
 # shus_flutter
 
-A new Flutter project.
+Shuhei Yoshida's Flutter project.
 
-## Getting Started
+[Twitter](https://twitter.com/TyrionJP)
+[Wantedly](https://www.wantedly.com/id/shuhei_yoshida_mob)
 
-This project is a starting point for a Flutter application.
+## Setting up
 
-A few resources to get you started if this is your first Flutter project:
+### [FVM](https://fvm.app/)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+FVMが導入されてない場合、[Installation](https://fvm.app/docs/getting_started/installation) に従って導入してください。
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+fvm install
+```
+
+### [Freezed](https://pub.dev/packages/freezed), [Auto route](https://pub.dev/packages/auto_route)
+
+[build runner](https://pub.dev/packages/build_runner) を使用してファイルを生成します。
+
+```
+make gen
+```
+
+## Feature
+
+### MLkit Pose Detection
+
+[Pose Detection](https://developers.google.com/ml-kit/vision/pose-detection) を使用して人の画像にレンダリングを行います。
+
+<img src="https://github.com/ShuheiYoshidaJP/shus_flutter/tree/develop/README_ASSETS/pose_detection.gif" width="300">
