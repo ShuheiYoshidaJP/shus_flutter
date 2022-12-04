@@ -11,7 +11,7 @@ class NativeChannel(messenger: BinaryMessenger) {
         channel.setMethodCallHandler { call, result ->
             when (call.method) {
                 "pose-fn" -> {
-                    plugin.poseDetect()
+                    plugin.poseDetect(call.arguments)
                 }
             }
         }
