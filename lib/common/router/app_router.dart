@@ -1,7 +1,10 @@
 import 'package:auto_route/auto_route.dart';
+// ignore: unused_import
 import 'package:flutter/material.dart';
 import 'package:shus_flutter/feature/feature_list/feature_list_page.dart';
-import 'package:shus_flutter/feature/pose/pose_page.dart';
+import 'package:shus_flutter/feature/pose/view/pose_initial_page.dart';
+import 'package:shus_flutter/feature/pose/result/pose_output.dart';
+import 'package:shus_flutter/feature/pose/view/pose_result_page.dart';
 
 part 'app_router.gr.dart';
 
@@ -13,7 +16,10 @@ part 'app_router.gr.dart';
       initial: true,
     ),
     AutoRoute(
-      page: PosePage,
+      page: PoseInitialPage,
+    ),
+    AutoRoute(
+      page: PoseResultPage,
     ),
   ],
 )

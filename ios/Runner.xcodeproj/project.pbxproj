@@ -3,16 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027419D82932488B00F2F266 /* InterfaceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419D72932488B00F2F266 /* InterfaceBase.swift */; };
+		027419DC29324D5700F2F266 /* PoseMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419DB29324D5700F2F266 /* PoseMain.swift */; };
+		027419DF2932500200F2F266 /* FlutterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419DE2932500200F2F266 /* FlutterImage.swift */; };
+		027419E12932544800F2F266 /* ImageRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419E02932544800F2F266 /* ImageRotation.swift */; };
+		027419FF2932616C00F2F266 /* PoseBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027419FE2932616C00F2F266 /* PoseBase.swift */; };
+		028A1D28293344F4009F2592 /* DrawRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D26293344F4009F2592 /* DrawRenderer.swift */; };
+		028A1D29293344F4009F2592 /* Segments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D27293344F4009F2592 /* Segments.swift */; };
+		028A1D2D29334CD6009F2592 /* PoseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D2C29334CD6009F2592 /* PoseInterface.swift */; };
+		028A1D2F2933734D009F2592 /* PoseInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028A1D2E2933734D009F2592 /* PoseInput.swift */; };
+		02C4886E29321EF100BFC7CC /* NativeChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4886D29321EF100BFC7CC /* NativeChannel.swift */; };
+		02C488702932310B00BFC7CC /* NativePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4886F2932310B00BFC7CC /* NativePlugin.swift */; };
+		02C488722932324300BFC7CC /* NativeOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488712932324300BFC7CC /* NativeOutput.swift */; };
+		02C488772932334200BFC7CC /* NativeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488762932334200BFC7CC /* NativeError.swift */; };
+		02C488792932348F00BFC7CC /* NativeRusultBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C488782932348F00BFC7CC /* NativeRusultBase.swift */; };
+		02C4887D29323BA200BFC7CC /* PoseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4887C29323BA200BFC7CC /* PoseError.swift */; };
+		02C4887F29323EAA00BFC7CC /* PoseOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C4887E29323EAA00BFC7CC /* PoseOutput.swift */; };
+		02F1CF682935070C002EC56E /* DispatchQueue+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1CF672935070C002EC56E /* DispatchQueue+Background.swift */; };
+		02F1CF6A2935B53B002EC56E /* CGPoint+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1CF692935B53B002EC56E /* CGPoint+Rotate.swift */; };
+		02F1CF6C29365D95002EC56E /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F1CF6B29365D95002EC56E /* Matrix.swift */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		D235878D6A7807B7AF427025 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4EC626E9AE73B171AB3A7D /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,9 +49,32 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		027419D72932488B00F2F266 /* InterfaceBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBase.swift; sourceTree = "<group>"; };
+		027419DB29324D5700F2F266 /* PoseMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseMain.swift; sourceTree = "<group>"; };
+		027419DE2932500200F2F266 /* FlutterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterImage.swift; sourceTree = "<group>"; };
+		027419E02932544800F2F266 /* ImageRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRotation.swift; sourceTree = "<group>"; };
+		027419FE2932616C00F2F266 /* PoseBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBase.swift; sourceTree = "<group>"; };
+		028A1D26293344F4009F2592 /* DrawRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawRenderer.swift; sourceTree = "<group>"; };
+		028A1D27293344F4009F2592 /* Segments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segments.swift; sourceTree = "<group>"; };
+		028A1D2C29334CD6009F2592 /* PoseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseInterface.swift; sourceTree = "<group>"; };
+		028A1D2E2933734D009F2592 /* PoseInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseInput.swift; sourceTree = "<group>"; };
+		02C4886D29321EF100BFC7CC /* NativeChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeChannel.swift; sourceTree = "<group>"; };
+		02C4886F2932310B00BFC7CC /* NativePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativePlugin.swift; sourceTree = "<group>"; };
+		02C488712932324300BFC7CC /* NativeOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeOutput.swift; sourceTree = "<group>"; };
+		02C488762932334200BFC7CC /* NativeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeError.swift; sourceTree = "<group>"; };
+		02C488782932348F00BFC7CC /* NativeRusultBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRusultBase.swift; sourceTree = "<group>"; };
+		02C4887C29323BA200BFC7CC /* PoseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseError.swift; sourceTree = "<group>"; };
+		02C4887E29323EAA00BFC7CC /* PoseOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseOutput.swift; sourceTree = "<group>"; };
+		02F1CF672935070C002EC56E /* DispatchQueue+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Background.swift"; sourceTree = "<group>"; };
+		02F1CF692935B53B002EC56E /* CGPoint+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Rotate.swift"; sourceTree = "<group>"; };
+		02F1CF6B29365D95002EC56E /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		0A4EC626E9AE73B171AB3A7D /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		2656D2427A5C1B7855111B26 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
+		41FACD1A9B1B7CF19B88567D /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		5E1DCACAEE1390A98770B099 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
@@ -49,12 +92,75 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D235878D6A7807B7AF427025 /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		027419DD29324FD000F2F266 /* TypeInterface */ = {
+			isa = PBXGroup;
+			children = (
+				027419DE2932500200F2F266 /* FlutterImage.swift */,
+				027419E02932544800F2F266 /* ImageRotation.swift */,
+			);
+			path = TypeInterface;
+			sourceTree = "<group>";
+		};
+		02C4886C29321DDB00BFC7CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				027419D72932488B00F2F266 /* InterfaceBase.swift */,
+				02C488782932348F00BFC7CC /* NativeRusultBase.swift */,
+				02C488712932324300BFC7CC /* NativeOutput.swift */,
+				02C488762932334200BFC7CC /* NativeError.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		02C48873293232BA00BFC7CC /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				02C4886F2932310B00BFC7CC /* NativePlugin.swift */,
+				02C4886D29321EF100BFC7CC /* NativeChannel.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		02C4887A29323B8500BFC7CC /* Pose */ = {
+			isa = PBXGroup;
+			children = (
+				028A1D26293344F4009F2592 /* DrawRenderer.swift */,
+				028A1D27293344F4009F2592 /* Segments.swift */,
+				02C4887C29323BA200BFC7CC /* PoseError.swift */,
+				02C4887E29323EAA00BFC7CC /* PoseOutput.swift */,
+				027419DB29324D5700F2F266 /* PoseMain.swift */,
+				027419FE2932616C00F2F266 /* PoseBase.swift */,
+				028A1D2C29334CD6009F2592 /* PoseInterface.swift */,
+				028A1D2E2933734D009F2592 /* PoseInput.swift */,
+			);
+			path = Pose;
+			sourceTree = "<group>";
+		};
+		02C488822932466D00BFC7CC /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				02C4887A29323B8500BFC7CC /* Pose */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		02F1CF66293506F2002EC56E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02F1CF672935070C002EC56E /* DispatchQueue+Background.swift */,
+				02F1CF692935B53B002EC56E /* CGPoint+Rotate.swift */,
+				02F1CF6B29365D95002EC56E /* Matrix.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9740EEB11CF90186004384FC /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +178,8 @@
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
+				ABDA9B47C2D0009552D89C30 /* Pods */,
+				FEC2024A361CD9AAEFA981EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +194,11 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				02F1CF66293506F2002EC56E /* Extensions */,
+				02C48873293232BA00BFC7CC /* Interface */,
+				02C4886C29321DDB00BFC7CC /* Protocols */,
+				02C488822932466D00BFC7CC /* Feature */,
+				027419DD29324FD000F2F266 /* TypeInterface */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -98,6 +211,24 @@
 			path = Runner;
 			sourceTree = "<group>";
 		};
+		ABDA9B47C2D0009552D89C30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E1DCACAEE1390A98770B099 /* Pods-Runner.debug.xcconfig */,
+				41FACD1A9B1B7CF19B88567D /* Pods-Runner.release.xcconfig */,
+				2656D2427A5C1B7855111B26 /* Pods-Runner.profile.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEC2024A361CD9AAEFA981EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A4EC626E9AE73B171AB3A7D /* Pods_Runner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,12 +236,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
+				E70196AB26AA60231DFB1460 /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+				E27414FD33A03FDE93D7086B /* [CP] Embed Pods Frameworks */,
+				F9B753A5B51609666A62E966 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +331,62 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
 		};
+		E27414FD33A03FDE93D7086B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E70196AB26AA60231DFB1460 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9B753A5B51609666A62E966 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -204,8 +394,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C488772932334200BFC7CC /* NativeError.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				028A1D28293344F4009F2592 /* DrawRenderer.swift in Sources */,
+				027419DF2932500200F2F266 /* FlutterImage.swift in Sources */,
+				027419D82932488B00F2F266 /* InterfaceBase.swift in Sources */,
+				027419FF2932616C00F2F266 /* PoseBase.swift in Sources */,
+				028A1D2D29334CD6009F2592 /* PoseInterface.swift in Sources */,
+				02C488792932348F00BFC7CC /* NativeRusultBase.swift in Sources */,
+				02F1CF6A2935B53B002EC56E /* CGPoint+Rotate.swift in Sources */,
+				02F1CF682935070C002EC56E /* DispatchQueue+Background.swift in Sources */,
+				02C4887D29323BA200BFC7CC /* PoseError.swift in Sources */,
+				028A1D2F2933734D009F2592 /* PoseInput.swift in Sources */,
+				027419DC29324D5700F2F266 /* PoseMain.swift in Sources */,
+				027419E12932544800F2F266 /* ImageRotation.swift in Sources */,
+				02F1CF6C29365D95002EC56E /* Matrix.swift in Sources */,
+				028A1D29293344F4009F2592 /* Segments.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+				02C4886E29321EF100BFC7CC /* NativeChannel.swift in Sources */,
+				02C488722932324300BFC7CC /* NativeOutput.swift in Sources */,
+				02C4887F29323EAA00BFC7CC /* PoseOutput.swift in Sources */,
+				02C488702932310B00BFC7CC /* NativePlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
@@ -350,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -399,7 +608,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;

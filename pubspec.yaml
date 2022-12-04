@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   freezed: ^2.2.1
   auto_route: ^5.0.2
+  image_picker: ^0.7.2+1
   
 
 dev_dependencies:
