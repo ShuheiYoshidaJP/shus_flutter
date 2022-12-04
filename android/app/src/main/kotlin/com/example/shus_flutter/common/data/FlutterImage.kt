@@ -4,12 +4,15 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import com.example.shus_flutter.common.`interface`.NativeInterface
 import com.google.mlkit.vision.common.InputImage
+import java.io.ByteArrayOutputStream
 import java.util.*
 
-class FlutterImage(): NativeInterface {
+class FlutterImage() : NativeInterface {
 
     lateinit var type: FileType
     lateinit var bitmap: Bitmap
+
+    private val stream = ByteArrayOutputStream()
 
     enum class FileType {
         File, Bytes,
@@ -45,7 +48,10 @@ class FlutterImage(): NativeInterface {
     }
 
     override fun toData(): HashMap<String, Any> {
-        var result = HashMap<String, Any>()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 90, stream)
+        val byteArray = stream.toByteArray()
+        val result = HashMap<String, Any>()
+        result.put("data", byteArray)
         return result
     }
 }
