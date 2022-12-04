@@ -1,3 +1,5 @@
+package com.example.shus_flutter
+
 import androidx.annotation.NonNull
 import com.example.shus_flutter.common.channel.NativeChannel
 import io.flutter.embedding.android.FlutterActivity
