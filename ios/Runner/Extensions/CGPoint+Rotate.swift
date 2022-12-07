@@ -12,7 +12,6 @@ extension CGPoint {
     // https://imagingsolution.net/imaging/affine-transformation/
     func affine(uiImage: UIImage) -> CGPoint {
         let size = uiImage.size
-        print(uiImage.imageOrientation.rawValue)
         let convert: (rotation: CGFloat, displacement: CGPoint) = {
             switch uiImage.imageOrientation {
             case .up:
