@@ -1,6 +1,7 @@
 package com.example.shus_flutter.common.channel
 
 import com.example.shus_flutter.feature.pose.PoseChannel
+import com.github.michaelbull.result.mapBoth
 import java.util.*
 
 class NativePlugin {
@@ -8,13 +9,16 @@ class NativePlugin {
         val poseChannel = PoseChannel()
         val argument: HashMap<String, Any>? = args as? HashMap<String, Any>?
         poseChannel.poseDetect(argument) { poseResult ->
-            if (poseResult.isSuccess) {
-                val data = poseResult.success?.toData()
-                completion(data!!)
-            } else {
-                val data = poseResult.failure?.toData()
-                completion(data!!)
-            }
+            poseResult.mapBoth(
+                success = { value ->
+                    val data = value.toData()
+                    completion(data)
+                },
+                failure = { err ->
+                    val data = err.toData()
+                    completion(data)
+                }
+            )
         }
     }
 }
